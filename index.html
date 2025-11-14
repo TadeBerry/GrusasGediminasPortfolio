@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <style>
         @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&display=swap");
 
@@ -19,9 +19,15 @@
             background: url(https://i.postimg.cc/kgrqC5kD/Tokyo-Cool-Japan-Background8.jpg) center left;
             background-size: cover;
             background-attachment: fixed;
+            background-repeat: no-repeat;
             width: 691px;
             height: 829px;
             overflow: hidden;
+            /* Prevent background movement on zoom */
+            background-position: center center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
         }
 
         h1 {
@@ -208,6 +214,28 @@
             body {
                 width: 100vw;
                 height: 100vh;
+                background-position: center center;
+                background-attachment: scroll;
+            }
+        }
+
+        /* Additional mobile optimizations */
+        @media (max-width: 768px) {
+            body {
+                background-attachment: scroll;
+                background-position: center center;
+            }
+            
+            .container {
+                transform: scale(0.9);
+                transform-origin: center;
+            }
+        }
+
+        /* Prevent background movement on iOS */
+        @supports (-webkit-touch-callout: none) {
+            body {
+                background-attachment: scroll;
             }
         }
     </style>
