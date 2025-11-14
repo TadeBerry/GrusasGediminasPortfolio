@@ -12,6 +12,11 @@
             font-family: "Poppins", sans-serif;
         }
 
+        html, body {
+            height: 100%;
+            overflow: hidden;
+        }
+
         body {
             display: flex;
             flex-direction: column;
@@ -22,7 +27,7 @@
             background-size: cover;
             background-attachment: fixed;
             padding: 20px;
-            overflow-x: hidden;
+            position: relative;
         }
 
         h1 {
@@ -213,6 +218,10 @@
                 width: 100px;
                 height: 130px;
             }
+            
+            .portfolio-btn {
+                font-size: 1.5em;
+            }
         }
 
         @media (max-width: 480px) {
@@ -231,7 +240,38 @@
             }
             
             .portfolio-btn {
-                font-size: 1.4em;
+                font-size: 1.2em;
+            }
+        }
+
+        @media (max-height: 700px) {
+            .container {
+                height: 300px;
+            }
+            
+            h1 {
+                margin-bottom: 10px;
+            }
+            
+            .portfolio-btn {
+                margin-top: 15px;
+                font-size: 1.5em;
+            }
+        }
+
+        @media (max-height: 600px) {
+            .container {
+                height: 250px;
+            }
+            
+            h1 {
+                font-size: 1.5em;
+                margin-bottom: 5px;
+            }
+            
+            .portfolio-btn {
+                margin-top: 10px;
+                font-size: 1.2em;
             }
         }
     </style>
