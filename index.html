@@ -13,15 +13,18 @@
         }
 
         body {
-            display: grid;
-            place-content: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             min-height: 100vh;
-            background: url(https://i.postimg.cc/kgrqC5kD/Tokyo-Cool-Japan-Background8.jpg) center left;
+            background: url(https://i.postimg.cc/kgrqC5kD/Tokyo-Cool-Japan-Background8.jpg) center center;
             background-size: cover;
             background-attachment: fixed;
-            width: 691px;
-            height: 829px;
-            overflow: hidden;
+            overflow: auto;
+            padding: 20px;
+            width: 100%;
+            position: relative;
         }
 
         h1 {
@@ -46,24 +49,24 @@
 
         .passport-photo {
             position: absolute;
-            top: 2%;
-            right: 3%;
+            top: 20px;
+            right: 20px;
             width: 133px;
             height: 160px;
             border: 2px solid #ffffff;
+            background: url(https://i.postimg.cc/C1jCthjQ/Photo-Final.jpg) center 30%;
             background-size: cover;
-            background-position: center;
         }
 
         .container {
-            position: relative;
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
             gap: 0.5em;
             width: 640px;
+            max-width: 90vw;
             height: 450px;
             transition: all 400ms;
-            margin-top: 50px;
+            margin-top: 0;
         }
 
         .container:hover .box {
@@ -204,20 +207,12 @@
                 filter: hue-rotate(90deg);
             }
         }
-
-        /* Media query for the specific screen size */
-        @media (max-width: 691px) and (max-height: 829px) {
-            body {
-                width: 100vw;
-                height: 100vh;
-            }
-        }
     </style>
     <title>グルサスゲディミナスのポートフォリオ</title>
 </head>
 <body>
     <h1>グルサスゲディミナス</h1>
-    <div class="passport-photo" style="--img: url(https://i.postimg.cc/5y40SSvD/Directional-Lightgurusasugediminasu2.jpg);"></div>
+    <div class="passport-photo"></div>
     <div class="container">
         <div class="box box-1" style="--img: url(https://i.postimg.cc/5y40SSvD/Directional-Lightgurusasugediminasu2.jpg);" data-text="Renji"></div>
         <div class="box box-2" style="--img: url(https://i.postimg.cc/14xNcq9b/Cubes2.jpg);" data-text="Sora"></div>
@@ -228,6 +223,3 @@
     <a href="page2.html" class="portfolio-btn">ポートフォリオ</a>
 </body>
 </html>
-
-
-
