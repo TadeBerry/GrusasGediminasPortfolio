@@ -483,28 +483,42 @@
             font-size: 1.1rem;
         }
 
-        /* Colorful anime icons */
-        .summer-icon {
+        /* Soft button icon for ClickQuest */
+        .clickquest-icon {
             position: relative;
             width: 60px;
             height: 60px;
-            background: linear-gradient(135deg, #ff9a3d, #ffcc67);
+            background: linear-gradient(135deg, #a8e6cf, #dcedc1);
             border-radius: 15px;
             display: flex;
             align-items: center;
             justify-content: center;
             margin-right: 15px;
             overflow: hidden;
-            box-shadow: 0 4px 12px rgba(255, 154, 61, 0.3);
+            box-shadow: 0 4px 12px rgba(168, 230, 207, 0.4);
         }
 
-        .summer-icon::before {
-            content: '☀️';
-            font-size: 2rem;
-            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+        .clickquest-icon::before {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #ffd3b6, #ffaaa5);
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(255, 170, 165, 0.3);
         }
 
-        /* Single sun only - no second sun/sparkle */
+        .clickquest-icon::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            top: 12px;
+            left: 12px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
 
         .valheim-icon {
             position: relative;
@@ -723,7 +737,7 @@
                 text-align: center;
             }
             
-            .summer-icon, .valheim-icon {
+            .clickquest-icon, .valheim-icon {
                 margin-right: 0;
                 margin-bottom: 10px;
             }
@@ -887,11 +901,11 @@
                     </div>
                 </div>
                 
-                <!-- Video 2 -->
+                <!-- Video 2 - Updated with new samurai video -->
                 <div class="work-item work-img reveal">
                     <div class="youtube-container">
                         <div class="video-overlay scroll-only"></div>
-                        <iframe src="https://www.youtube.com/embed/e6pjd_fuzks" 
+                        <iframe src="https://www.youtube.com/embed/I4HDiXDr10g" 
                                 frameborder="0" 
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                                 allowfullscreen>
@@ -959,8 +973,8 @@
                 <div class="websites-grid">
                     <div class="website-card reveal">
                         <div class="website-card-header">
-                            <div class="summer-icon"></div>
-                            <h4 class="website-name">Summer Shukudai</h4>
+                            <div class="clickquest-icon"></div>
+                            <h4 class="website-name">クリッククエスト</h4>
                         </div>
                         <a href="https://summershukudai.web.app/" class="website-link" target="_blank">
                             <i class='bx bx-link-external'></i>
@@ -971,7 +985,7 @@
                     <div class="website-card reveal">
                         <div class="website-card-header">
                             <div class="valheim-icon"></div>
-                            <h4 class="website-name">Valheim Biome</h4>
+                            <h4 class="website-name">文字の配置と作成ボタン</h4>
                         </div>
                         <a href="https://valheim-biome-2025pre-52511.web.app/" class="website-link" target="_blank">
                             <i class='bx bx-link-external'></i>
@@ -1188,5 +1202,3 @@
     </script>
 </body>
 </html>
-
-
