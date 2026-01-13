@@ -6,7 +6,6 @@
     <title>ジェッド - ウェブフロントとゲーム制作ポートフォリオ</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <style>
-        /* Base Styles */
         * {
             margin: 0;
             padding: 0;
@@ -87,7 +86,6 @@
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
 
-        /* Header Styles */
         header {
             position: fixed;
             top: 0;
@@ -156,7 +154,6 @@
             cursor: pointer;
         }
 
-        /* Hero Section */
         .hero {
             padding-top: 120px;
             min-height: 100vh;
@@ -167,13 +164,13 @@
 
         .hero-content {
             display: grid;
-            grid-template-columns: 1.1fr 0.9fr; /* Adjusted ratio */
-            gap: 30px; /* Reduced gap */
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 30px;
             align-items: center;
         }
 
         .hero-text h1 {
-            font-size: 2.5rem; /* Reduced from 3rem */
+            font-size: 2.5rem;
             margin-bottom: 20px;
             line-height: 1.2;
         }
@@ -218,12 +215,11 @@
 
         .hero-image img {
             width: 100%;
-            max-width: 380px; /* Slightly smaller */
+            max-width: 380px;
             border-radius: 50%;
             box-shadow: var(--shadow);
         }
 
-        /* About Section */
         .about-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -252,7 +248,6 @@
             margin-bottom: 20px;
         }
 
-        /* Skills Section */
         .skills-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -321,7 +316,6 @@
             box-shadow: var(--shadow);
         }
 
-        /* Work Section */
         .work-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -334,7 +328,7 @@
             box-shadow: var(--shadow);
             transition: transform 0.3s ease;
             position: relative;
-            height: 200px; /* Fixed height for all items */
+            height: 200px;
         }
 
         .work-item:hover {
@@ -343,8 +337,8 @@
 
         .work-item img {
             width: 100%;
-            height: 100%; /* Fill the container */
-            object-fit: cover; /* Ensure image covers entire area */
+            height: 100%;
+            object-fit: cover;
             transition: transform 0.5s ease;
         }
 
@@ -352,22 +346,20 @@
             transform: scale(1.1);
         }
 
-        /* YouTube Video Styles */
         .youtube-container {
             position: relative;
             width: 100%;
-            height: 100%; /* Fill the container */
+            height: 100%;
             overflow: hidden;
         }
 
         .youtube-container iframe {
             width: 100%;
-            height: 100%; /* Fill the container */
+            height: 100%;
             border: none;
             pointer-events: auto;
         }
 
-        /* Video overlay to prevent scroll capture */
         .video-overlay {
             position: absolute;
             top: 0;
@@ -376,12 +368,10 @@
             height: 100%;
             z-index: 1;
             cursor: pointer;
-            /* Make overlay invisible but still functional */
             background: transparent;
         }
 
         .video-overlay.scroll-only {
-            /* This class makes the overlay only capture scroll events */
             pointer-events: none;
         }
 
@@ -389,11 +379,9 @@
             pointer-events: auto;
         }
 
-        /* Website Links Section */
         .websites-section {
             margin-top: 80px;
             padding-top: 60px;
-            /* Removed the border-top line */
         }
 
         .websites-header {
@@ -409,7 +397,6 @@
             display: inline-block;
         }
 
-        /* ウェブサイトタイトルに下線を追加 */
         .websites-title::after {
             content: '';
             position: absolute;
@@ -483,7 +470,6 @@
             font-size: 1.1rem;
         }
 
-        /* Soft button icon for ClickQuest */
         .clickquest-icon {
             position: relative;
             width: 60px;
@@ -560,7 +546,6 @@
             50% { opacity: 1; transform: scale(1.2); }
         }
 
-        /* Contact Section */
         .contact-form {
             max-width: 600px;
             margin: 0 auto;
@@ -591,11 +576,10 @@
 
         .submit-btn {
             width: 100%;
-            font-size: 1.1rem; /* 送信ボタンのフォントサイズを大きく */
-            padding: 14px 30px; /* 少しパディングも調整 */
+            font-size: 1.1rem;
+            padding: 14px 30px;
         }
 
-        /* Footer */
         footer {
             background-color: var(--secondary-color);
             color: var(--light-color);
@@ -642,10 +626,9 @@
             border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        /* Responsive Styles */
         @media (max-width: 1200px) {
             .hero-text h1 {
-                font-size: 2.3rem; /* Slightly smaller for medium screens */
+                font-size: 2.3rem;
             }
         }
 
@@ -743,7 +726,6 @@
             }
         }
 
-        /* Scroll Reveal Animation Styles */
         .reveal {
             opacity: 0;
             transform: translateY(30px);
@@ -757,7 +739,6 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header class="l-header">
         <div class="container">
             <nav class="navbar">
@@ -782,7 +763,6 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container">
             <div class="hero-content">
@@ -803,7 +783,6 @@
         </div>
     </section>
 
-    <!-- About Section -->
     <section class="about" id="about">
         <div class="container">
             <div class="section-title">
@@ -817,13 +796,12 @@
                     <h3 class="about-subtitle reveal">グルサスゲディミナスと申します</h3>
                     <p class="about-text reveal">日本文化とビデオゲームへの深い愛情から、IT分野への情熱が芽生えました。これらの体験が、創造性と技術を融合させる道を歩むきっかけとなりました。</p>
                     <p class="about-text reveal">私の仕事は常に正確さと卓越性へのこだわりを基盤としています。インターフェースに限らず、システム開発やゲーム制作など、幅広い分野で細部にまで注意を払い、最良の成果を目指しています。</p>
-                    <p class="about-text reveal">日々、新しい技術やデザインの潮流を学びながら、ITソリューションの可能性を探求しています。新しいアイデアを形にすることを楽しみ、常に自己成長を目指しています。</p>
+                    <p class="about-text reveal">日々、新しい技術やデザインの潮流を学びながら、ITソリューションの可能性を探求しています。新しいアイデアを形にすることを楽しみ、常に自我成長を目指しています。</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
     <section class="skills" id="skills">
         <div class="container">
             <div class="section-title">
@@ -837,19 +815,19 @@
                         <div class="skill-item skills-data reveal">
                             <div class="skill-header">
                                 <span class="skill-name">HTML/CSS</span>
-                                <span class="skill-percentage">85%</span>
+                                <span class="skill-percentage">80%</span>
                             </div>
                             <div class="skill-bar">
-                                <div class="skill-progress" data-width="85"></div>
+                                <div class="skill-progress" data-width="80"></div>
                             </div>
                         </div>
                         <div class="skill-item skills-data reveal">
                             <div class="skill-header">
                                 <span class="skill-name">ユニティ/C#</span>
-                                <span class="skill-percentage">75%</span>
+                                <span class="skill-percentage">85%</span>
                             </div>
                             <div class="skill-bar">
-                                <div class="skill-progress" data-width="75"></div>
+                                <div class="skill-progress" data-width="85"></div>
                             </div>
                         </div>
                         <div class="skill-item skills-data reveal">
@@ -882,14 +860,12 @@
         </div>
     </section>
 
-    <!-- Work Section -->
     <section class="work" id="work">
         <div class="container">
             <div class="section-title">
                 <h2>成果物</h2>
             </div>
             <div class="work-grid">
-                <!-- Video 1 -->
                 <div class="work-item work-img reveal">
                     <div class="youtube-container">
                         <div class="video-overlay scroll-only"></div>
@@ -901,7 +877,6 @@
                     </div>
                 </div>
                 
-                <!-- Video 2 - Updated with new samurai video -->
                 <div class="work-item work-img reveal">
                     <div class="youtube-container">
                         <div class="video-overlay scroll-only"></div>
@@ -913,7 +888,6 @@
                     </div>
                 </div>
                 
-                <!-- Video 3 -->
                 <div class="work-item work-img reveal">
                     <div class="youtube-container">
                         <div class="video-overlay scroll-only"></div>
@@ -925,7 +899,6 @@
                     </div>
                 </div>
                 
-                <!-- Video 4 -->
                 <div class="work-item work-img reveal">
                     <div class="youtube-container">
                         <div class="video-overlay scroll-only"></div>
@@ -937,7 +910,6 @@
                     </div>
                 </div>
                 
-                <!-- Video 5 -->
                 <div class="work-item work-img reveal">
                     <div class="youtube-container">
                         <div class="video-overlay scroll-only"></div>
@@ -949,7 +921,6 @@
                     </div>
                 </div>
                 
-                <!-- Video 6 -->
                 <div class="work-item work-img reveal">
                     <div class="youtube-container">
                         <div class="video-overlay scroll-only"></div>
@@ -962,7 +933,6 @@
                 </div>
             </div>
             
-            <!-- Websites Section -->
             <div class="websites-section">
                 <div class="websites-header">
                     <h3 class="websites-title reveal">
@@ -997,7 +967,6 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
             <div class="section-title">
@@ -1020,7 +989,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -1038,7 +1006,6 @@
     </footer>
 
     <script>
-        //Toggling Menu
         const showMenu = (toggleId, navId) => {
             const toggle = document.getElementById(toggleId);
             const nav = document.getElementById(navId);
@@ -1052,7 +1019,6 @@
 
         showMenu('nav-toggle', 'nav-menu');
 
-        //Toggling Active Link
         const navLink = document.querySelectorAll('.nav-link');
 
         function linkAction() {
@@ -1065,7 +1031,6 @@
 
         navLink.forEach(n => n.addEventListener('click', linkAction));
 
-        // Custom Scroll Reveal Animation
         function scrollReveal() {
             const reveals = document.querySelectorAll('.reveal');
             
@@ -1080,7 +1045,6 @@
             });
         }
 
-        // Animate skill bars on scroll
         function animateSkillBars() {
             const skillBars = document.querySelectorAll('.skill-progress');
             
@@ -1095,13 +1059,11 @@
             });
         }
 
-        // Initialize skill bars to 0 width
         const skillBars = document.querySelectorAll('.skill-progress');
         skillBars.forEach(bar => {
             bar.style.width = '0%';
         });
 
-        // Form submission
         const contactForm = document.getElementById('contactForm');
         if (contactForm) {
             contactForm.addEventListener('submit', function(e) {
@@ -1111,19 +1073,17 @@
             });
         }
 
-        // Active navigation link based on scroll position - FIXED
         function setActiveNavLink() {
             const sections = document.querySelectorAll('section');
             const navLinks = document.querySelectorAll('.nav-link');
             
             let current = '';
-            let scrollPosition = window.scrollY + 200; // Add offset for fixed header
+            let scrollPosition = window.scrollY + 200;
             
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
                 const sectionHeight = section.clientHeight;
                 
-                // Check if current scroll position is within this section
                 if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
                     current = section.getAttribute('id');
                 }
@@ -1131,13 +1091,11 @@
 
             navLinks.forEach(link => {
                 link.classList.remove('active');
-                // Fixed: Properly compare the href attribute with the current section
                 if (link.getAttribute('href') === '#' + current) {
                     link.classList.add('active');
                 }
             });
             
-            // Special case for when we're at the very bottom of the page
             if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 100) {
                 navLinks.forEach(link => {
                     link.classList.remove('active');
@@ -1148,7 +1106,6 @@
             }
         }
 
-        // Video scroll fix - improved version
         function initVideoScrollFix() {
             const videoOverlays = document.querySelectorAll('.video-overlay');
             
@@ -1156,43 +1113,33 @@
                 let isScrolling = false;
                 let scrollTimer;
                 
-                // Only capture scroll events, not click events
                 overlay.addEventListener('wheel', function(e) {
-                    // Prevent default scroll behavior on the video
                     e.preventDefault();
                     
-                    // Scroll the page instead
                     window.scrollBy({
                         top: e.deltaY,
                         behavior: 'auto'
                     });
                     
-                    // Set scrolling flag
                     isScrolling = true;
                     clearTimeout(scrollTimer);
                     
-                    // Reset scrolling flag after scrolling stops
                     scrollTimer = setTimeout(() => {
                         isScrolling = false;
                     }, 500);
                 });
                 
-                // For touch devices
                 overlay.addEventListener('touchmove', function(e) {
-                    // Allow touch events to pass through to the page
-                    // This prevents the video from capturing touch scroll events
                 });
             });
         }
 
-        // Event listeners
         window.addEventListener('scroll', function() {
             scrollReveal();
             animateSkillBars();
             setActiveNavLink();
         });
 
-        // Initial calls
         window.addEventListener('load', function() {
             scrollReveal();
             animateSkillBars();
@@ -1202,4 +1149,3 @@
     </script>
 </body>
 </html>
-
