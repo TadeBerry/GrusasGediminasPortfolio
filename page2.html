@@ -248,6 +248,165 @@
             margin-bottom: 20px;
         }
 
+        /* Rirekusho Section Styles */
+        .rirekusho-section {
+            background-color: var(--light-color);
+        }
+
+        .rirekusho-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .rirekusho-images {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+
+        .rirekusho-item {
+            text-align: center;
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .rirekusho-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .rirekusho-item a {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .rirekusho-item img {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+            transition: transform 0.3s ease;
+        }
+
+        .rirekusho-item:hover img {
+            transform: scale(1.02);
+        }
+
+        .rirekusho-caption {
+            margin-top: 15px;
+            font-size: 1rem;
+            color: var(--secondary-color);
+            opacity: 0.8;
+        }
+
+        .rirekusho-click-note {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: var(--secondary-color);
+            opacity: 0.7;
+        }
+
+        /* Games Section Styles */
+        .games-section {
+            background-color: var(--gray-color);
+        }
+
+        .games-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .games-content {
+            display: flex;
+            justify-content: center;
+        }
+
+        .game-item {
+            text-align: center;
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .game-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .game-item a {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .game-image {
+            margin-bottom: 25px;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .game-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .game-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .game-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+
+        .game-description {
+            font-size: 1.1rem;
+            color: var(--secondary-color);
+            opacity: 0.8;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .game-link {
+            display: inline-flex;
+            align-items: center;
+            padding: 12px 30px;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+        }
+
+        .game-link:hover {
+            background-color: #9a3ad4;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(181, 71, 255, 0.3);
+        }
+
+        .game-link i {
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
         .skills-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -652,6 +811,10 @@
             .websites-grid {
                 grid-template-columns: 1fr;
             }
+            
+            .rirekusho-images {
+                grid-template-columns: 1fr;
+            }
         }
 
         @media (max-width: 768px) {
@@ -694,6 +857,14 @@
             }
             
             .websites-title {
+                font-size: 1.5rem;
+            }
+            
+            .game-item {
+                padding: 20px;
+            }
+            
+            .game-title {
                 font-size: 1.5rem;
             }
         }
@@ -750,6 +921,8 @@
                     <ul class="nav-links">
                         <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
                         <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                        <li class="nav-item"><a href="#rirekusho" class="nav-link">Rirekusho</a></li>
+                        <li class="nav-item"><a href="#games" class="nav-link">Games</a></li>
                         <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
                         <li class="nav-item"><a href="#work" class="nav-link">Work</a></li>
                         <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
@@ -797,6 +970,57 @@
                     <p class="about-text reveal">日本文化とビデオゲームへの深い愛情から、IT分野への情熱が芽生えました。これらの体験が、創造性と技術を融合させる道を歩むきっかけとなりました。</p>
                     <p class="about-text reveal">私の仕事は常に正確さと卓越性へのこだわりを基盤としています。インターフェースに限らず、システム開発やゲーム制作など、幅広い分野で細部にまで注意を払い、最良の成果を目指しています。</p>
                     <p class="about-text reveal">日々、新しい技術やデザインの潮流を学びながら、ITソリューションの可能性を探求しています。新しいアイデアを形にすることを楽しみ、常に自我成長を目指しています。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="rirekusho-section" id="rirekusho">
+        <div class="container">
+            <div class="section-title">
+                <h2>履歴書</h2>
+            </div>
+            <div class="rirekusho-container">
+                <div class="rirekusho-images">
+                    <div class="rirekusho-item reveal">
+                        <a href="https://postimg.cc/Snp7Kmfk" target="_blank">
+                            <img src="https://i.postimg.cc/Kz3fDsRZ/Rirekusho-Unity(1).jpg" alt="履歴書">
+                        </a>
+                        <p class="rirekusho-caption">履歴書 1ページ目</p>
+                    </div>
+                    
+                    <div class="rirekusho-item reveal">
+                        <a href="https://postimg.cc/Snp7Kmfk" target="_blank">
+                            <img src="https://i.postimg.cc/J7JKygfp/Rirekusho-Unity(2).jpg" alt="履歴書">
+                        </a>
+                        <p class="rirekusho-caption">履歴書 2ページ目</p>
+                    </div>
+                </div>
+                <p class="rirekusho-click-note reveal">クリックで高画質版を表示</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="games-section" id="games">
+        <div class="container">
+            <div class="section-title">
+                <h2>ゲーム</h2>
+            </div>
+            <div class="games-container">
+                <div class="games-content">
+                    <div class="game-item reveal">
+                        <a href="YOUR_GAME_LINK_HERE" target="_blank">
+                            <div class="game-image">
+                                <img src="https://i.postimg.cc/8P8GMjZC/Final-Refuel-Image.jpg" alt="Final Refuel Game">
+                            </div>
+                            <h3 class="game-title">Final Refuel</h3>
+                            <p class="game-description">燃料が限られ、多くの障害物が存在する危険な宇宙環境で生き残りを競う、緊迫感あふれる2D宇宙飛行ゲームです。GameManager、SoundManager、Cinemachine、その他多くのゲームオブジェクトをシームレスに統合し、スムーズでシームレスな動作を実現するよう、プロフェッショナルなコードが開発されています。</p>
+                            <div class="game-link">
+                                <i class='bx bx-play-circle'></i>
+                                Steamリンク
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
